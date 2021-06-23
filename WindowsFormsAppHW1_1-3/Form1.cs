@@ -52,19 +52,28 @@ namespace WindowsFormsAppHW1_1_3
 
         private void buttonRectangle_Click(object sender, MouseEventArgs e)
         {
-            if(System.Windows.Forms.MouseButtons.Right == e.Button)
+            if (System.Windows.Forms.MouseButtons.Right == e.Button)
             {
                 if (ModifierKeys.HasFlag(Keys.Control))
                 {
                     Application.Exit();
                 }
+                MessageBox.Show($"{Form1.ActiveForm.Size.Width}; {Form1.ActiveForm.Size.Height};");
             }
-            MessageBox.Show((sender as Button).Text, "Click", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                MessageBox.Show((sender as Button).Text, "Click", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            Form1.ActiveForm.Text = $"{MousePosition.X-Form1.ActiveForm.Location.X}; {MousePosition.Y-Form1.ActiveForm.Location.Y};";
         }
     }
 }

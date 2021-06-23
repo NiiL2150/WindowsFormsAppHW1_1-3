@@ -44,6 +44,7 @@ namespace WindowsFormsAppHW1_1_3
             this.button1.TabIndex = 0;
             this.button1.Text = "Outside";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonRectangle_Click);
             // 
             // button2
@@ -56,6 +57,7 @@ namespace WindowsFormsAppHW1_1_3
             this.button2.TabIndex = 1;
             this.button2.Text = "On the edge";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.button2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonRectangle_Click);
             // 
             // button3
@@ -70,7 +72,8 @@ namespace WindowsFormsAppHW1_1_3
             this.button3.TabIndex = 2;
             this.button3.Text = "Inside";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.MouseUp+= new System.Windows.Forms.MouseEventHandler(this.buttonRectangle_Click);
+            this.button3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
+            this.button3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonRectangle_Click);
             // 
             // Form1
             // 
@@ -84,6 +87,7 @@ namespace WindowsFormsAppHW1_1_3
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.ResumeLayout(false);
 
         }
